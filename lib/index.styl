@@ -1,0 +1,338 @@
+@import "nib";
+
+beige = #F9F2E7
+dark-gray = #333
+gray = #777
+green = #8FBE00
+light-blue = #40C0CB
+light-gray = #EEE
+light-green = #AEE239
+light-red = #E23430
+light-yellow = #FFE476
+red = #B11C17
+yellow = #DEAC11
+
+@keyframes rotate {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
+global-reset()
+* { box-sizing: border-box }
+html, body { height: 100%; background: rgb(46,85,178); }
+
+.navlogo {
+    position:absolute;
+    left:0;
+    top:0;
+    margin-left: 70px
+    margin-top: 30px
+}
+
+h1 {
+    color:white;
+    font: bold 56px/64px "Lobster Two", sans-serif;
+    text-align: center;
+    margin: 0 0 10px;
+}
+h2 {
+    color:white;
+    font: 40px/54px "Quicksand", sans-serif;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+a {
+  color:rgba(255, 255, 255, 0.9);
+}
+
+strong {
+    font-weight: bold
+}
+
+p {
+    color:rgba(255, 255, 255, 0.9);
+    font: 18px/22px "Quicksand", sans-serif;
+    text-align: center;
+    margin: 0;
+
+    &.notice {
+        margin: 10px 0;
+    }
+}
+
+.footer {
+    width: 100%
+    height: 60px
+    text-align: center
+    color: gray
+    padding: 10px 0 10px
+    position: relative
+    bottom: 0
+    border-radius: 5px 5px 0 0
+    background white
+
+    iframe {
+      display: inline-block;
+      vertical-align: bottom;
+      margin-right: 10px;
+    }
+
+    p {
+        font: 12px/20px "Quicksand", sans-serif;
+        @media (max-width: 600px) {
+          font-size 14px
+        }
+    }
+
+    form p {
+        display: inline;
+    }
+
+    .byline {
+        padding: 0 10px;
+    }
+}
+
+.page {
+    display: flex
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 640px;
+}
+
+.drop-zone {
+
+    .drop-zone-overlay {
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.5)
+        text-align: center
+
+        &:after {
+            color: white
+            content: 'DROP TO UPLOAD'
+            display: block
+            font: 24px/40px "Quicksand", sans-serif
+            margin-top: -20px
+            position: relative
+            text-shadow: 0 1px dark-gray
+            top: 50%
+        }
+    }
+}
+
+.spinner {
+    width: 500px
+    min-height: 300px
+    margin: 0 auto 20px
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-content: center
+    justify-content: center
+
+    // &:before {
+    //     background: url(/images/up.png)  center center / 300px 300px no-repeat
+    //     content: ""
+    //     position: absolute
+    //     width: 300px
+    //     height: 300px
+    //     transition: transform 1s
+    //     z-index: -1
+    // }
+
+    &.spinner-animated:before {
+        animation: rotate 5s infinite linear
+    }
+
+    .spinner-image {
+        width: 100%
+    }
+    // @media screen and (max-width: 1000px) {
+    //     .spinner-image {
+    //         width: 50%
+    //     }
+    // }
+
+    .spinner-name {
+        font: bold 18px/20px "Quicksand", sans-serif
+        text-align: center
+        color: white
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        margin-top: 10px
+    }
+
+    .spinner-size {
+        font: italic 12px/20px "Quicksand", sans-serif
+        text-align: center
+        color: white
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+    }
+}
+
+.tempalink {
+    display: flex
+    flex-direction: column
+
+    input {
+        background: #DEAC11
+        color: dark-gray
+        border: 0
+        margin: 20px 0
+        font: 18px/1 monospace
+        height: 60px
+        padding: 20px
+        text-align: center
+        width: 100%
+    }
+
+    img {
+        margin: auto
+        padding-bottom: 60px
+    }
+}
+
+.data {
+    color: gray
+    font: 14px/20px "Quicksand", sans-serif
+    text-align: center
+    overflow: hidden
+
+    .datum {
+        float: left
+        width: 50%
+    }
+}
+
+
+
+.download-button {
+    display: block
+    box-shadow: inset 0 1px 1px light-green
+    padding: 20px
+    background: #DEAC11
+    border: none
+    color: white
+    width: 100%
+    font: bold 18px/20px "Quicksand", sans-serif
+    transition: 0.25s
+    cursor: pointer
+    text-transform: uppercase
+
+    &:hover, &:focus {
+        box-shadow: inset 0 1px 1px #DEAC11
+        background: white
+        color: #DEAC11
+    }
+
+    &:active {
+        background: green
+    }
+}
+
+.progress-bar {
+    height: 60px
+    overflow: hidden
+    background: #DEAC11
+    transition: all 1s ease
+
+    .progress-bar-inner {
+        float: left
+        height: 100%
+        background: green
+        box-shadow: inset 0 1px 1px light-green
+        overflow: hidden
+    }
+
+    .progress-bar-text {
+        font: 14px/60px "Quicksand", sans-serif
+        color: white
+        text-align: center
+        text-transform: uppercase
+    }
+
+    &.progress-bar-failed {
+        background: red
+        box-shadow: inset 0 1px 1px light-red
+
+        .progress-bar-text {
+            text-align: center
+        }
+    }
+
+    &.progress-bar-in-progress {
+        background: beige
+        .progress-bar-inner {
+            background: #FFCC00
+            box-shadow: inset 0 1px 1px light-yellow
+        }
+
+        .progress-bar-text {
+            color: black
+            float: right
+            margin-right: 5px
+        }
+    }
+
+    &.progress-bar-small {
+        height: 30px
+        width: 50%
+        margin: 8px auto
+        border-radius: 5px
+
+        .progress-bar-text {
+            line-height: 30px
+        }
+    }
+}
+
+.select-file-label {
+    border: 2px solid black
+    border-radius: 4px
+    padding: 2px 5px
+    margin-top: 10px
+    background: white
+    color: rgb(46,85,178)
+    display: inline-block
+    cursor: pointer
+
+    &:hover, &:active {
+        border-color: black
+        background: rgb(46,85,178)
+        color: white
+    }
+
+    input[type="file"] {
+        position: fixed
+        top: -1000px
+    }
+}
+
+.donate-button {
+    border: 2px solid red
+    border-radius: 4px
+    padding: 2px 5px
+    margin-right: 10px
+    background: yellow
+    display: inline-block
+    cursor: pointer
+    transition: all 0.25s ease
+    font: 12px/1 "Quicksand", sans-serif
+    color: white
+
+    &:hover, &:active {
+        border-color: yellow
+        background: white
+        color: red
+    }
+}
