@@ -1,18 +1,17 @@
 # File Drop
+
 A peer to peer file transfer ReactJS and NodeJs application that allows users to transfer files from their browser
 
-<a href="https://xkcd.com/949/"><img src="http://imgs.xkcd.com/comics/file_transfer.png" alt="XKCD 949" width="30%" align="right" /></a> <img src="static/images/wordmark.png" alt="FilePizza wordmark" width="50%" /> <h3>Peer-to-peer file transfers in your browser</h3>
-
-
+<a href="https://xkcd.com/949/"><img src="http://imgs.xkcd.com/comics/file_transfer.png" alt="XKCD 949" width="30%" align="right" /></a> <img src="static/images/paperplane.png" alt="FileDrop" width="50%" /> <h3>Peer-to-peer file transfers in your browser</h3>
 
 Using [WebRTC](http://www.webrtc.org), FilePizza eliminates the initial upload step required by other web-based file sharing services. When senders initialize a transfer, they receive a "tempalink" they can distribute to recipients. Upon visiting this link, recipients' browsers connect directly to the sender’s browser and may begin downloading the selected file. Because data is never stored in an intermediary server, the transfer is fast, private, and secure.
 
-A hosted instance of FilePizza is available at [file.pizza](https://file.pizza).
+A hosted instance of FilePizza is available at [file.drop](https://file.drop).
 
 ## Requirements
 
-* node `0.12.x`
-* npm `2.x.x`
+- node `0.12.x`
+- npm `2.x.x`
 
 ## Installation
 
@@ -57,8 +56,7 @@ Client-side JavaScript and CSS are compiled using webpack and are available at `
 
 ## Troubleshooting
 
-If you receive a `Error: EMFILE, too many open files` error when running `npm
-start` on a Mac, this is a result of Browserify's compilation step opening up a
+If you receive a `Error: EMFILE, too many open files` error when running `npm start` on a Mac, this is a result of Browserify's compilation step opening up a
 large number of npm modules all at once. You'll have to increase the maximum
 number of open files allowed on your system:
 
@@ -67,4 +65,3 @@ number of open files allowed on your system:
 ## License & Acknowledgements
 
 FilePizza is released under the [BSD 3-Clause license](https://github.com/kern/filepizza/blob/master/LICENSE). A huge thanks to [WebTorrent](https://github.com/feross/webtorrent) which we use for the file transfers under the hood.
-
