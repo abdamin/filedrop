@@ -4,9 +4,8 @@
   "description": "Free peer-to-peer file transfers in your browser.",
   "preferGlobal": "true",
   "bin": "./dist/index.js",
-  "author": "Alex Kern <alex@kern.io> (http://kern.io)",
-  "license": "BSD-3-Clause",
-  "homepage": "https://github.com/kern/filepizza",
+  "author": "Abdullah Amin",
+  "homepage": "https://github.com/abdamin/filedrop",
   "scripts": {
     "start": "node ./dist/index.js",
     "build": "babel lib --ignore __tests__,__mocks__ --out-dir dist && webpack -p ./lib/client"
