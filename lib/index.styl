@@ -30,16 +30,7 @@ html, body { height: 100%; background: rgb(46,85,178); }
     margin-top: 30px
 }
 
-@media only screen and (max-width: 600px) {
-  /* For tablets: */
-  .navlogo {
-    position:absolute;
-    left:0;
-    top:0;
-    margin-left: 0px
-    margin-top: 30px
-}
-}
+
 
 h1 {
     color:white;
@@ -47,6 +38,29 @@ h1 {
     text-align: center;
     margin: 0 0 10px;
     display: block;
+}
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+  .navlogo {
+    position:absolute;
+    left:0;
+    top:0;
+    margin-left: 10px
+    margin-top: 10px
+  }
+  .logoimg {
+      height: 50px;
+      width: 50px;
+  }
+
+   h1 {
+    color:white;
+    font: bold 40px/50px "Sirin Stencil", sans-serif;
+    text-align: center;
+    margin: 0 0 10px;
+    display: block;
+    
+  }
 }
 h2 {
     color:white;
@@ -182,6 +196,7 @@ p {
         white-space: nowrap
         margin-top: 10px
     }
+    
 
     .spinner-size {
         font: italic 12px/20px "Quicksand", sans-serif
@@ -190,6 +205,29 @@ p {
         overflow: hidden
         text-overflow: ellipsis
         white-space: nowrap
+    }
+    @media screen and (max-width: 600px) {
+       .spinner-name {
+        font: bold 18px/20px "Quicksand", sans-serif
+        text-align: center
+        color: white
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        margin-top: 10px
+        margin-right:138px;
+       } 
+       .spinner-size {
+        font: italic 12px/20px "Quicksand", sans-serif
+        text-align: center
+        color: white
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        margin-right:138px;
+
+       }
+    
     }
 }
 
@@ -207,6 +245,20 @@ p {
         padding: 20px
         text-align: center
         width: 100%
+    }
+    @media screen and (max-width: 600px) {
+       input {
+        background: #DEAC11
+        color: dark-gray
+        border: 0
+        margin: 20px 0
+        font: 8px/1 monospace
+        height: 60px
+        padding: 20px
+        text-align: center
+        width: 100%
+    } 
+    
     }
 
     img {
