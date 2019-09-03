@@ -1,7 +1,7 @@
 {
-  "name": "filepizza",
+  "name": "filedrop",
   "version": "1.0.0",
-  "description": "Free peer-to-peer file transfers in your browser.",
+  "description": "Free peer-to-peer file transfers using webRTC.",
   "preferGlobal": "true",
   "bin": "./dist/index.js",
   "author": "Abdullah Amin",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:kern/filepizza.git"
+    "url": "git@github.com:abdamin/filedrop.git"
   },
   "bugs": {
-    "url": "https://github.com/kern/filepizza/issues"
+    "url": "https://github.com/abdamin/filedrop/issues"
   },
   "engines": {
     "node": ">= 5.0.0",
