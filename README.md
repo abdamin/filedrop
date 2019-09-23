@@ -8,11 +8,6 @@ Using [WebRTC](http://www.webrtc.org), Filedrop eliminates the initial upload st
 
 A hosted instance of Filedrop is available at [file.drop](https://shrouded-wave-14872.herokuapp.com/).
 
-## Requirements
-
-- node `0.12.x`
-- npm `2.x.x`
-
 ## Development
 
     $ git clone https://github.com/abdamin/filedrop.git
