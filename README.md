@@ -13,5 +13,5 @@ An instance of Filedrop is available at [file.drop](https://shrouded-wave-14872.
 
     $ git clone https://github.com/abdamin/filedrop.git
     $ npm install
-    $ npm run-script build
+    $ npm run build
     $ npm start
