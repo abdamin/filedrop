@@ -54,7 +54,7 @@
     "nodemon": "^1.4.1",
     "noop-loader": "^1.0.0",
     "null-loader": "^0.1.1",
-    "react": "^0.13.0",
+    "react": "^0.14.0",
     "react-frozenhead": "^0.3.0",
     "react-google-analytics": "^0.2.0",
     "react-qr": "0.0.2",
